@@ -1,0 +1,45 @@
+/* Import the fonts first */
+@import "@fontsource/inter/index.css";
+@import "@fontsource/montserrat/index.css";
+@import "@fontsource/open-sans/index.css";
+@import 'boxicons/css/boxicons.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/* Then Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes imgFloat {
+    50% {
+      transform: translateY(10px);
+      border-radius: 45% 55% 45% 55%;
+    }
+  }
+  html {
+    overflow-x: hidden;
+  }
+  
+  /* RESPONSIVENESS */
+  @media only screen and (max-width: 1024px) {
+    image,
+    image img {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .featured-image {
+      order: 1;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 540px) {
+    main {
+      overflow-x: hidden;
+    }
+  }
+

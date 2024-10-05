@@ -1,0 +1,29 @@
+{
+  "name": "vercel-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.1.0",
+    "@fontsource/montserrat": "^5.1.0",
+    "@fontsource/open-sans": "^5.1.0",
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "boxicons": "^2.1.4",
+    "scrollreveal": "^4.0.9",
+    "swiper": "^11.1.14",
+    "typed.js": "^2.1.0",
+    "vue": "^3.4.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.1"
+  }
+}
