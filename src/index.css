@@ -43,3 +43,150 @@
     }
   }
 
+  .education, .skills {
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.skill-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    /* Removed animation */
+}
+
+.skill-content {
+    width: 100%;
+    flex: 1 1 25rem;
+    margin-top: -20px;
+}
+
+.skill-box {
+    height: 100%;
+    width: 100%;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin-top: -20px;
+}
+
+.single-skill {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.single-skill span {
+    font-size: 1.6rem;
+}
+
+.bar-side {
+    background: white;
+    height: 1rem;
+    border-radius: 50rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar {
+    position: absolute;
+    height: 100%;
+    background: #3490dc;
+}
+
+.bar-1 {
+    width: 90%;
+}
+
+.bar-2 {
+    width: 80%;
+}
+
+.bar-3 {
+    width: 70%;
+}
+
+.row {
+    display: flex;
+    column-gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1 1 30rem;
+}
+
+.column h2 {
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem 1.96rem;
+    /* Removed animation */
+}
+
+.box {
+    border-left: .2rem solid #3490dc;
+}
+
+.education{
+  padding: 3.5rem;
+}
+
+.education-content {
+    padding-left: 1.9rem;
+}
+
+.education-content .content {
+    padding: 0.5rem;
+    border: .01rem solid #3490dc;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.topic{
+  color: white;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    left: -2.8rem;
+    top: -1.5rem;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    background: #3490dc;
+}
+
+.content .year {
+    font-size: 1.5rem;
+    color: #3490dc;
+}
+
+.content .year i {
+    color: #3490dc;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+}
+
+.content h3 {
+    font-size: 1.7rem;
+    letter-spacing: .05rem;
+    margin: .5rem 0;
+    color: white;
+}
+
+.content p {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.skills{
+  padding: 5.5rem;
+}

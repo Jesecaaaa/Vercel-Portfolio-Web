@@ -1,17 +1,17 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   
-  darkMode: 'class', // Set to 'class' to enable dark mode based on a class
+  darkMode: 'class', // Enable dark mode based on a class
   
   theme: {
     extend: {
       colors: {
-        // Define your dark mode colors here, if needed
+        // Custom dark mode colors
         background: {
-          DEFAULT: '#1a202c', // Example dark background color
+          DEFAULT: '#1a202c', // Dark background color
         },
         text: {
-          DEFAULT: '#f7fafc', // Example light text color for dark mode
+          DEFAULT: '#f7fafc', // Light text color for dark mode
         },
       },
     },

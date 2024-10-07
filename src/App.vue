@@ -116,6 +116,137 @@
     </div>
   </section>
 
+  <section class="education" id="education">
+    <div class="text-center whattop">
+      <h3 class="text-primary text-3xl font-bold mb-16">Education</h3>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="box">
+          <div class="education-content">
+            <div
+              class="content border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl"
+            >
+              <div class="year">2021-2024<i class="bx bxs-calendar"></i></div>
+              <h3>Computer Science - CSU</h3>
+              <p>
+                Pursuing a Bachelor’s degree in Computer Science with a focus on software
+                development and data structures.
+              </p>
+            </div>
+          </div>
+          <div class="education-content">
+            <div
+              class="content border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl"
+            >
+              <div class="year">2019-2021 <i class="bx bxs-calendar"></i></div>
+              <p>
+                Completed an associate degree in Information Technology, gaining
+                foundational knowledge in programming and database management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <div class="education-content">
+            <div
+              class="content border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl"
+            >
+              <div class="year">2020-2020<i class="bx bxs-calendar"></i></div>
+              <h3>Web Development Bootcamp</h3>
+              <p>
+                Completed a web development bootcamp focused on modern web technologies
+                and frameworks.
+              </p>
+            </div>
+          </div>
+          <div class="education-content">
+            <div
+              class="content border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl"
+            >
+              <div class="year">2021-2023 <i class="bx bxs-calendar"></i></div>
+              <h3>Certifications</h3>
+              <p>
+                Completed certifications in Full Stack Development and Database Management
+                from google.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="text-center whattop">
+      <h3 class="text-primary text-3xl font-bold mb-16">Skills</h3>
+    </div>
+    <div class="wrapper">
+      <div
+        class="skill-content rounded-lg border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl"
+      >
+        <div class="skill-box skill-box1">
+          <div class="text-center whattop">
+            <h3 class="text-primary text-3xl font-bold mb-16">Frontend</h3>
+          </div>
+          <div class="single-skill">
+            <span class="topic">HTML</span>
+            <span class="topic">90%</span>
+          </div>
+          <div class="bar-side">
+            <div class="bar bar-1"></div>
+          </div>
+          <div class="single-skill">
+            <span class="topic">CSS</span>
+            <span class="topic">80%</span>
+          </div>
+          <div class="bar-side">
+            <div class="bar bar-2"></div>
+          </div>
+          <div class="single-skill">
+            <span class="topic">JavaScript</span>
+            <span class="topic">70%</span>
+          </div>
+          <div class="bar-side">
+            <div class="bar bar-3"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="skill-content rounded-lg border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl"
+      >
+        <div class="skill-box skill-box2">
+          <div class="text-center whattop">
+            <h3 class="text-primary text-3xl font-bold mb-16">Backend</h3>
+          </div>
+          <div class="single-skill">
+            <span class="topic">Node.js</span>
+            <span class="topic">85%</span>
+          </div>
+          <div class="bar-side">
+            <div class="bar bar-2"></div>
+          </div>
+          <div class="single-skill">
+            <span class="topic">PHP</span>
+            <span class="topic">75%</span>
+          </div>
+          <div class="bar-side">
+            <div class="bar bar-2"></div>
+          </div>
+          <div class="single-skill">
+            <span class="topic">Python</span>
+            <span class="topic">70%</span>
+          </div>
+          <div class="bar-side">
+            <div class="bar bar-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- projects -->
   <section class="px-5 my-32 mx-auto max-w-7xl" id="projects">
     <div class="text-center text-white project1">
@@ -123,9 +254,11 @@
         Recent <span class="text-primary">Projects</span>
       </h3>
       <p class="mb-6 md:w-3/4 mx-auto">
-        I bring a passion for creating user-friendly experiences and a drive design trends
-        and technologies to deliver top-notch designs that meet needs and exceed their
-        expectations
+        I recently completed several projects, including a responsive e-commerce website
+        that increased conversion rates by 30%, a collaborative portfolio site for a local
+        artist featuring animations and interactive elements, a personal blog platform
+        with a custom content management system, and a web application for tracking
+        personal finances with user authentication and data visualization.
       </p>
     </div>
     <div class="flex md:flex-row flex-col items-center justify-between gap-8 my-20">
@@ -145,7 +278,7 @@
   <!-- reviews  -->
   <section class="my-16 max-w-7xl mx-auto px-5" id="resume">
     <div class="text-center lastna">
-      <p class="mb-3 font-montserrat font-medium text-white">Testimonials</p>
+      <p class="mb-3 font-montserrat font-medium text-white">HEAD UPS</p>
       <h3 class="text-primary text-3xl font-bold mb-16">What Our Customers Say</h3>
     </div>
 
@@ -153,58 +286,40 @@
     <div class="swiper mySwiper lastone">
       <div class="swiper-wrapper">
         <div class="swiper-slide py-8 px-3 text-white">
-          <img src="./img/review2.svg" alt="" />
+          <img src="./img/jelli.jpg" alt="" style="border-radius: 50%" />
           <p class="text-sm px-2 my-5 text-justify">
-            I recently worked with Saira on a project and was extremely impressed with
-            their creativity and attention to detail. She listened to my ideas and
-            provided valuable input, which helped to create a UI that was both
-            aesthetically pleasing and easy to use.
+            I recently collaborated with Jeseca Ruelan, a skilled backend programmer, on a
+            project and was extremely impressed with her creativity and meticulous
+            attention to detail. She carefully listened to my ideas and provided valuable
+            input, which contributed to developing a user interface that was not only
+            visually stunning but also intuitive and easy to use.
           </p>
-          <h5 class="text-primary mb-2">Tom Cook</h5>
-          <p class="text-sm px-2">Executive Engineer</p>
+          <h5 class="text-primary mb-2">Jelli Uayan</h5>
+          <p class="text-sm px-2">Web Developer</p>
         </div>
         <div class="swiper-slide py-8 px-3 text-white">
-          <img src="./img/review1.svg" alt="" />
+          <img src="./img/djeah.jpg" alt="" style="border-radius: 50%" />
           <p class="text-sm px-2 my-5 text-justify">
-            I recently worked with Saira on a project and was extremely impressed with
-            their creativity and attention to detail. She listened to my ideas and
-            provided valuable input, which helped to create a UI that was both
-            aesthetically pleasing and easy to use.
+            I recently collaborated with Jeseca Ruelan, a talented frontend programmer, on
+            a project and was thoroughly impressed with her technical expertise and
+            attention to detail. She skillfully translated my ideas into practical
+            solutions, offering valuable insights that enhanced both the functionality and
+            user experience, resulting in a system that was not only efficient but also
+            intuitive and easy to navigate.
           </p>
-          <h5 class="text-primary mb-2">Rick Wright</h5>
-          <p class="text-sm px-2">Executive Engineer</p>
+          <h5 class="text-primary mb-2">Djeah Tabada</h5>
+          <p class="text-sm px-2">Computer Engineer</p>
         </div>
+
         <div class="swiper-slide py-8 px-3 text-white">
-          <img src="./img/review3.svg" alt="" />
+          <img src="./img/tina.jpg" alt="" style="border-radius: 50%" />
           <p class="text-sm px-2 my-5 text-justify">
-            I recently worked with Saira on a project and was extremely impressed with
-            their creativity and attention to detail. She listened to my ideas and
+            I recently worked with Jeseca Ruelan on a project and was extremely impressed
+            with her creativity and attention to detail. She listened to my ideas and
             provided valuable input, which helped to create a UI that was both
             aesthetically pleasing and easy to use.
           </p>
-          <h5 class="text-primary mb-2">Alega Wind</h5>
-          <p class="text-sm px-2">Software Engineer</p>
-        </div>
-        <div class="swiper-slide py-8 px-3 text-white">
-          <img src="./img/review1.svg" alt="" />
-          <p class="text-sm px-2 my-5 text-justify">
-            I recently worked with Saira on a project and was extremely impressed with
-            their creativity and attention to detail. She listened to my ideas and
-            provided valuable input, which helped to create a UI that was both
-            aesthetically pleasing and easy to use.
-          </p>
-          <h5 class="text-primary mb-2">Rick Wright</h5>
-          <p class="text-sm px-2">Digital Marketer</p>
-        </div>
-        <div class="swiper-slide py-8 px-3 text-white">
-          <img src="./img/review2.svg" alt="" />
-          <p class="text-sm px-2 my-5 text-justify">
-            I recently worked with Saira on a project and was extremely impressed with
-            their creativity and attention to detail. She listened to my ideas and
-            provided valuable input, which helped to create a UI that was both
-            aesthetically pleasing and easy to use.
-          </p>
-          <h5 class="text-primary mb-2">Mark J.</h5>
+          <h5 class="text-primary mb-2">Cristina Repollo</h5>
           <p class="text-sm px-2">Software Developer</p>
         </div>
       </div>
@@ -219,7 +334,7 @@
         <h5 class="mb-3">Company</h5>
         <a href="#" class="block my-2 text-sm text-slate-300">About Us</a>
         <a href="#" class="block my-2 text-sm text-slate-300">Why Choose me</a>
-        <a href="#" class="block my-2 text-sm text-slate-300">Testimonial</a>
+        <a href="#" class="block my-2 text-sm text-slate-300">Head Ups</a>
         <a href="#" class="block my-2 text-sm text-slate-300">Contact Us</a>
       </div>
 
