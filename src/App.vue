@@ -33,6 +33,11 @@
 
   <!-- banner section -->
   <section class="max-w-7xl mx-auto px-5 my-5" id="home">
+    <div class="featured-image flex items-center mt-20">
+      <div class="image ml-5 flex lg:hidden xl:hidden">
+        <img src="./img/moon.jpeg" alt="avatar" class="min-w-full min-h-full" />
+      </div>
+    </div>
     <div
       class="flex md:flex-row flex-col justify-between items-center text-white gap-4 py-10"
     >
@@ -47,22 +52,38 @@
           well-versed in HTML, CSS, and JavaScript. Can and will do various things as of
           Web Designing.
         </p>
-        <button class="py-4 px-10 rounded-md bg-primary text-white font-bold">
-          Let's Talk
-        </button>
+        <div class="">
+          <button
+            class="py-4 px-10 rounded-md bg-primary text-white font-bold mr-4"
+            @click="redirectToGmail"
+          >
+            Email Me
+          </button>
+          <a href="https://github.com/Jesecaaaa">
+            <button class="py-4 px-10 rounded-md bg-primary text-white font-bold">
+              See Portfolio
+            </button>
+          </a>
+        </div>
         <!-- social btn -->
         <div class="mt-12 mb-8 flex gap-4 items-center">
           <p>Visit Me —</p>
           <div class="flex space-x-3">
-            <a href="#"><img src="./icons/instagram.svg" alt="" class="w-8 h-8" /></a>
-            <a href="#"><img src="./icons/linkedIn.svg" alt="" class="w-8 h-8" /></a>
-            <a href="#"><img src="./icons/twitter.svg" alt="" class="w-8 h-8" /></a>
+            <a href="https://www.instagram.com/yas_itsten/"
+              ><img src="./icons/instagram.svg" alt="" class="w-8 h-8"
+            /></a>
+            <a href="https://www.linkedin.com/in/jeseca-ruelan-2892aa245/"
+              ><img src="./icons/linkedIn.svg" alt="" class="w-8 h-8"
+            /></a>
+            <a href="https://x.com/jeseji0328?t=fjxkPd5jBJjtBHK15xQ6Gg&s=09"
+              ><img src="./icons/twitter.svg" alt="" class="w-8 h-8"
+            /></a>
           </div>
         </div>
       </div>
       <div class="featured-image flex items-center">
-        <div class="image ml-5">
-          <img src="./img/moon.jpeg" alt="avatar" class="max-w-full max-h-full" />
+        <div class="image ml-5 hidden md:flex lg:flex xl:flex">
+          <img src="./img/moon.jpeg" alt="avatar" class="min-w-full min-h-full" />
         </div>
       </div>
     </div>
@@ -283,7 +304,7 @@
     </div>
 
     <!-- testimonial section -->
-    <div class="swiper mySwiper lastone">
+    <div class="swiper mySwiper lastone mb-16">
       <div class="swiper-wrapper">
         <div class="swiper-slide py-8 px-3 text-white">
           <img src="./img/jelli.jpg" alt="" style="border-radius: 50%" />
@@ -325,43 +346,57 @@
       </div>
       <div class="swiper-pagination"></div>
     </div>
-
-    <h4 class="text-2xl text-white pt-12 mb-12">Contact</h4>
-    <div
-      class="text-white md:ml-16 flex flex-col md:flex-row justify-between md:items-center gap-6"
-    >
-      <div class="md:w-1/3 md:pl-10">
-        <h5 class="mb-3">Company</h5>
-        <a href="#" class="block my-2 text-sm text-slate-300">About Us</a>
-        <a href="#" class="block my-2 text-sm text-slate-300">Why Choose me</a>
-        <a href="#" class="block my-2 text-sm text-slate-300">Head Ups</a>
-        <a href="#" class="block my-2 text-sm text-slate-300">Contact Us</a>
-      </div>
-
-      <div class="md:w-1/3">
-        <h5 class="mb-3">Resources</h5>
-        <a href="#" class="block my-2 text-sm text-slate-300">Privacy Policy</a>
-        <a href="#" class="block my-2 text-sm text-slate-300">Terms and Condition</a>
-        <a href="#" class="block my-2 text-sm text-slate-300">Blog</a>
-        <a href="#" class="block my-2 text-sm text-slate-300">Contact Me</a>
-      </div>
-
-      <div class="md:w-1/3">
-        <h5 class="mb-5">Email Me:</h5>
-        <div class="relative">
+    <div class="text-center lastna">
+      <p class="mb-3 font-montserrat font-medium text-white">Contact</p>
+      <h3 class="text-primary text-3xl font-bold">Let's talk</h3>
+    </div>
+    <div class="flex flex-wrap py-8">
+      <!-- Form Section (3/4 width) -->
+      <div class="w-full md:w-2/4 px-4 leftform">
+        <form @submit.prevent="handleSubmit" class="mt-8 space-y-4 formtext">
           <input
+            maxlength="20"
+            v-model="name"
+            type="text"
+            placeholder="Name"
+            class="text-white rounded-lg border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl w-full rounded-md py-3 px-4 bg-transparent focus:bg-transparent text-sm outline-blue-500"
+          />
+          <input
+            v-model="email"
             type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your Email"
-            class="bg-[#2B2E3C] py-5 pl-5 rounded-lg"
+            placeholder="Email"
+            class="rounded-lg border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl w-full rounded-md py-3 px-4 text-white bg-transparent focus:bg-transparent text-sm outline-blue-500"
           />
           <input
-            type="submit"
-            value="Send"
-            class="bg-primary py-4 px-8 rounded-lg absolute left-44 top-1"
+            maxlength="30"
+            v-model="subject"
+            type="text"
+            placeholder="Subject"
+            class="rounded-lg border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl w-full rounded-md py-3 px-4 text-white bg-transparent focus:bg-transparent text-sm outline-blue-500"
           />
-        </div>
+          <textarea
+            v-model="message"
+            placeholder="Message"
+            rows="6"
+            class="rounded-lg border border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl w-full rounded-md px-4 text-white bg-transparent focus:bg-transparent text-sm pt-3 outline-blue-500"
+          ></textarea>
+          <button
+            type="submit"
+            class="text-white bg-blue-500 hover:bg-blue-600 tracking-wide rounded-md text-sm px-4 py-3 w-full"
+          >
+            Send
+          </button>
+        </form>
+        <div v-if="toastVisible" class="toast">{{ toastMessage }}</div>
+      </div>
+
+      <!-- Image Section (1/4 width) -->
+      <div class="w-full md:w-2/4 px-4 flex justify-center items-center rightform">
+        <img
+          src="https://zxjdvpjsiwzhnsyilmaw.supabase.co/storage/v1/object/sign/Images/hero-img.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJbWFnZXMvaGVyby1pbWcucG5nIiwiaWF0IjoxNzI4MjgzMDc5LCJleHAiOjE4ODU5NjMwNzl9.-fjwCTASAe_3O9ewyP_qnHI7OA7FM-0TkDCx5anayZ4&t=2024-10-07T06%3A37%3A57.187Z"
+          alt="Contact Image"
+          class="max-w-full rounded-md shadow-lg"
+        />
       </div>
     </div>
   </section>
@@ -493,6 +528,18 @@ html {
     overflow-x: hidden;
   }
 }
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bfe; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+}
 </style>
 
 <script>
@@ -501,6 +548,16 @@ import Swiper from "swiper";
 import Typed from "typed.js";
 
 export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      toastVisible: false,
+      toastMessage: "",
+    };
+  },
   mounted() {
     /* ----- TYPING EFFECT ----- */
     var typingEffect = new Typed(".typedText", {
@@ -526,10 +583,8 @@ export default {
     sr.reveal(".project1", { delay: 200 });
     sr.reveal(".lastone", { delay: 300 });
     sr.reveal(".lastna", { delay: 100 });
-
-    /* -- PROJECT BOX -- */
-
-    /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
+    sr.reveal(".skill-box", { delay: 200 });
+    sr.reveal(".skill-content", { delay: 200 });
 
     /* -- ABOUT INFO & CONTACT INFO -- */
     const srLeft = ScrollReveal({
@@ -541,6 +596,9 @@ export default {
 
     srLeft.reveal(".about-info", { delay: 100 });
     srLeft.reveal(".contact-info", { delay: 100 });
+    srLeft.reveal(".education-content", { delay: 100 });
+    srLeft.reveal(".box", { delay: 150 });
+    srLeft.reveal(".leftform", { delay: 150 });
     sr.reveal(".picproj2", { delay: 300 });
 
     /* -- ABOUT SKILLS & FORM BOX -- */
@@ -553,6 +611,7 @@ export default {
 
     srRight.reveal(".frontends", { delay: 400 });
     srRight.reveal(".backends", { delay: 200 });
+    srRight.reveal(".rightform", { delay: 150 });
     sr.reveal(".databases", { delay: 500 });
     sr.reveal(".picproj1", { delay: 300 });
 
@@ -618,6 +677,59 @@ export default {
         }
       });
     });
+  },
+  methods: {
+    handleSubmit() {
+      // Regex Patterns
+      const nameRegex = /^[A-Za-z\s]+$/; // Accepts only letters and spaces
+      const subjectRegex = /^[A-Za-z\s,.\?!]+$/; // Accepts letters, spaces, commas, dots, exclamations, questions
+      const messageRegex = /^[A-Za-z\s,.\?!]+$/; // Same for message
+
+      // Validate Inputs
+      if (!nameRegex.test(this.name)) {
+        this.showToast("Invalid name! Only letters and spaces are allowed.");
+        return;
+      }
+
+      if (!this.subject || !subjectRegex.test(this.subject)) {
+        this.showToast(
+          "Invalid subject! Only letters, spaces, and punctuation are allowed."
+        );
+        return;
+      }
+
+      if (!this.message || !messageRegex.test(this.message)) {
+        this.showToast(
+          "Invalid message! Only letters, spaces, and punctuation are allowed."
+        );
+        return;
+      }
+
+      // Form submission logic here
+      this.showToast("Thank you for messaging!");
+      this.resetForm();
+    },
+    showToast(message) {
+      this.toastMessage = message;
+      this.toastVisible = true;
+      setTimeout(() => {
+        this.toastVisible = false;
+      }, 3000); // Hide toast after 3 seconds
+    },
+    resetForm() {
+      this.name = "";
+      this.email = "";
+      this.subject = "";
+      this.message = "";
+    },
+    redirectToGmail() {
+      const email = "jesecaruelan@gmail.com"; // Replace with your email
+      const subject = "Hire for"; // Replace with your subject
+      const body = "Good day, I would like to hire you"; // Replace with your message body
+      window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+    },
   },
 };
 </script>

@@ -83,10 +83,6 @@
     margin: 1rem;
 }
 
-.single-skill span {
-    font-size: 1.6rem;
-}
-
 .bar-side {
     background: white;
     height: 1rem;
@@ -189,4 +185,8 @@
 
 .skills{
   padding: 5.5rem;
+}
+
+.formtext textarea{
+  resize: none;
 }
