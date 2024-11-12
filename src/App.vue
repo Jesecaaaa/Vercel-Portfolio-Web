@@ -1,34 +1,51 @@
 <template>
-  <header class="fixed top-0 right-0 left-0 z-50 md:py-1 transition-all duration-300">
-    <nav class="toptodown max-w-7xl mx-auto bg-gray-800 md:bg-transparent p-5">
-      <div class="flex items-center justify-center">
-        <!-- Changed justify-between to justify-center -->
+  <header class="">
+    <nav class="max-w-7xl mx-auto bg-gray-800 md:bg-transparent p-5">
+      <div class="flex items-center justify-between w-full">
+        <!-- Logo (Left side) -->
         <a href="/" class="text-white font-bold text-lg flex items-center gap-3">
-          <img src="./img/Logo.svg" alt="" class="w-8 h-8" /> Jes.
+          <img src="./img/Logo.svg" alt="Logo" class="w-8 h-8" /> Jes.
         </a>
-        <!-- only for large devices -->
-        <div class="hidden md:flex space-x-10 ml-10">
-          <!-- Added margin-left to space out from the logo -->
-          <a href="#home" class="text-primary hover:text-gray-300">Home</a>
-          <a href="#projects" class="text-white hover:text-gray-300">About</a>
-          <a href="#resume" class="text-white hover:text-gray-300">Contact</a>
-        </div>
-        <!-- menu button, only for mobile -->
-        <div class="md:hidden absolute right-5">
-          <!-- Positioned mobile button to the right -->
-          <button id="mobile-menu-button" class="text-white text-2xl">
-            <i class="bx bx-menu"></i>
-          </button>
-        </div>
-      </div>
 
-      <!-- mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden">
-        <a href="#home" class="block text-white py-2 mt-3 hover:bg-gray-700">Home</a>
-        <a href="#projects" class="block text-white py-2 hover:bg-gray-700">About</a>
-        <a href="#resume" class="block text-white py-2 hover:bg-gray-700">Contact</a>
+        <!-- Navigation and Menu Button (Right side) -->
+        <div class="flex items-center space-x-10 ml-auto">
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-10">
+            <a href="#home" class="text-white hover:text-gray-300">Home</a>
+            <a href="#Services" class="text-white hover:text-gray-300">Services</a>
+            <a href="#education" class="text-white hover:text-gray-300">Education</a>
+            <a href="#skills" class="text-white hover:text-gray-300">Skills</a>
+            <a href="#projects" class="text-white hover:text-gray-300">About</a>
+            <a href="#resume" class="text-white hover:text-gray-300">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-white text-2xl">
+              <i class="bx bx-menu"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-nav"
+      class="fixed inset-0 bg-gray-900 bg-opacity-90 p-8 transform translate-x-full transition-transform duration-300 z-40"
+    >
+      <button id="close-mobile-menu" class="text-white text-2xl absolute top-5 right-5">
+        <i class="bx bx-x"></i>
+      </button>
+      <div class="flex flex-col space-y-6 mt-10 text-center">
+        <a href="#home" class="text-white text-lg">Home</a>
+        <a href="#Services" class="text-white text-lg">Services</a>
+        <a href="#education" class="text-white text-lg">Education</a>
+        <a href="#skills" class="text-white text-lg">Skills</a>
+        <a href="#projects" class="text-white text-lg">About</a>
+        <a href="#resume" class="text-white text-lg">Contact</a>
+      </div>
+    </div>
   </header>
 
   <!-- banner section -->
@@ -52,7 +69,7 @@
           well-versed in HTML, CSS, and JavaScript. Can and will do various things as of
           Web Designing.
         </p>
-        <div class="">
+        <div class="flex">
           <button
             class="py-4 px-10 rounded-md bg-primary text-white font-bold mr-4"
             @click="redirectToGmail"
@@ -201,7 +218,7 @@
   </section>
 
   <section class="skills" id="skills">
-    <div class="text-center whattop">
+    <div class="text-center">
       <h3 class="text-primary text-3xl font-bold mb-16">Skills</h3>
     </div>
     <div class="wrapper">
@@ -393,7 +410,7 @@
       <!-- Image Section (1/4 width) -->
       <div class="w-full md:w-2/4 px-4 flex justify-center items-center rightform">
         <img
-          src="https://zxjdvpjsiwzhnsyilmaw.supabase.co/storage/v1/object/sign/Images/hero-img.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJbWFnZXMvaGVyby1pbWcucG5nIiwiaWF0IjoxNzI4MjgzMDc5LCJleHAiOjE4ODU5NjMwNzl9.-fjwCTASAe_3O9ewyP_qnHI7OA7FM-0TkDCx5anayZ4&t=2024-10-07T06%3A37%3A57.187Z"
+          src="https://tixwibgexlqwgogwyovb.supabase.co/storage/v1/object/public/cv-portfolio/hero-img.png"
           alt="Contact Image"
           class="max-w-full rounded-md shadow-lg"
         />
@@ -436,7 +453,7 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.8); /* Dark background when sticky */
 }
 header.sticky {
@@ -550,6 +567,7 @@ import Typed from "typed.js";
 export default {
   data() {
     return {
+      mobileMenuVisible: false,
       name: "",
       email: "",
       subject: "",
@@ -559,8 +577,7 @@ export default {
     };
   },
   mounted() {
-    /* ----- TYPING EFFECT ----- */
-    var typingEffect = new Typed(".typedText", {
+    const typingEffect = new Typed(".typedText", {
       strings: ["Video Editor", "Frontend Junior", "Developer", ""],
       loop: true,
       typeSpeed: 100,
@@ -568,7 +585,7 @@ export default {
       backDelay: 2000,
     });
 
-    /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+    /* ----- SCROLL REVEAL ANIMATION ----- */
     const sr = ScrollReveal({
       origin: "top",
       distance: "80px",
@@ -576,7 +593,6 @@ export default {
       reset: true,
     });
 
-    /* -- HOME -- */
     sr.reveal(".featured-image", { delay: 200 });
     sr.reveal(".hometop", { delay: 200 });
     sr.reveal(".whattop", { delay: 300 });
@@ -586,7 +602,6 @@ export default {
     sr.reveal(".skill-box", { delay: 200 });
     sr.reveal(".skill-content", { delay: 200 });
 
-    /* -- ABOUT INFO & CONTACT INFO -- */
     const srLeft = ScrollReveal({
       origin: "left",
       distance: "80px",
@@ -601,7 +616,6 @@ export default {
     srLeft.reveal(".leftform", { delay: 150 });
     sr.reveal(".picproj2", { delay: 300 });
 
-    /* -- ABOUT SKILLS & FORM BOX -- */
     const srRight = ScrollReveal({
       origin: "right",
       distance: "80px",
@@ -616,7 +630,7 @@ export default {
     sr.reveal(".picproj1", { delay: 300 });
 
     // Initialize Swiper
-    var swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       spaceBetween: 10,
       pagination: {
@@ -624,68 +638,54 @@ export default {
         clickable: true,
       },
       breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
+        640: { slidesPerView: 1, spaceBetween: 20 },
+        768: { slidesPerView: 2, spaceBetween: 40 },
+        1024: { slidesPerView: 3, spaceBetween: 50 },
       },
     });
 
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const header = document.querySelector("header");
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initial element check and setup
+      const mobileNav = document.getElementById("mobile-nav");
+      const menuButton = document.getElementById("mobile-menu-button");
+      const closeButton = document.getElementById("close-mobile-menu");
 
-    // Toggle the mobile menu
-    mobileMenuButton.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
-
-    // Scroll event to manage background color change and sticky class
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 100) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    });
-
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const targetSection = document.querySelector(this.getAttribute("href"));
-        const navHeight = document.querySelector("nav").offsetHeight;
-
-        window.scrollTo({
-          top: targetSection.offsetTop - navHeight,
-          behavior: "smooth",
-        });
-
-        // Reset URL hash after scroll
-        if (window.location.hash) {
-          window.location.replace(window.location.pathname);
+      if (menuButton && mobileNav && closeButton) {
+        function openMobileNav() {
+          // Re-fetch the element to ensure it exists when clicked
+          const navElement = document.getElementById("mobile-nav");
+          if (navElement) {
+            navElement.classList.remove("translate-x-full");
+            document.documentElement.classList.add("overflow-hidden");
+          } else {
+            console.error("mobileNav not found when trying to open.");
+          }
         }
-      });
+
+        function closeMobileNav() {
+          // Re-fetch the element to ensure it exists when clicked
+          const navElement = document.getElementById("mobile-nav");
+          if (navElement) {
+            navElement.classList.add("translate-x-full");
+            document.documentElement.classList.remove("overflow-hidden");
+          } else {
+            console.error("mobileNav not found when trying to close.");
+          }
+        }
+
+        menuButton.addEventListener("click", openMobileNav);
+        closeButton.addEventListener("click", closeMobileNav);
+      } else {
+        console.error("One or more elements not found for mobile navigation.");
+      }
     });
   },
   methods: {
     handleSubmit() {
-      // Regex Patterns
-      const nameRegex = /^[A-Za-z\s]+$/; // Accepts only letters and spaces
-      const subjectRegex = /^[A-Za-z\s,.\?!]+$/; // Accepts letters, spaces, commas, dots, exclamations, questions
-      const messageRegex = /^[A-Za-z\s,.\?!]+$/; // Same for message
+      const nameRegex = /^[A-Za-z\s]+$/;
+      const subjectRegex = /^[A-Za-z\s,.\?!]+$/;
+      const messageRegex = /^[A-Za-z\s,.\?!]+$/;
 
-      // Validate Inputs
       if (!nameRegex.test(this.name)) {
         this.showToast("Invalid name! Only letters and spaces are allowed.");
         return;
@@ -705,7 +705,6 @@ export default {
         return;
       }
 
-      // Form submission logic here
       this.showToast("Thank you for messaging!");
       this.resetForm();
     },
@@ -714,7 +713,7 @@ export default {
       this.toastVisible = true;
       setTimeout(() => {
         this.toastVisible = false;
-      }, 3000); // Hide toast after 3 seconds
+      }, 3000);
     },
     resetForm() {
       this.name = "";
@@ -723,9 +722,9 @@ export default {
       this.message = "";
     },
     redirectToGmail() {
-      const email = "jesecaruelan@gmail.com"; // Replace with your email
-      const subject = "Hire for"; // Replace with your subject
-      const body = "Good day, I would like to hire you"; // Replace with your message body
+      const email = "jesecaruelan@gmail.com";
+      const subject = "Hire for";
+      const body = "Good day, I would like to hire you";
       window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
